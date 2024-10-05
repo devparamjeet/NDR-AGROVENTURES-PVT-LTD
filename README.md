@@ -27,7 +27,7 @@ NDR AGROVENTURES PVT LTD specializes in sourcing and exporting premium agricultu
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/ndr-agroventures-website.git
+   git clone https://github.com/devparamjeet/ndr-agroventures-website.git
    ```
 2. Navigate to the project directory:
    ```
