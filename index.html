@@ -17,42 +17,36 @@
 
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-left">
-                <a href="#" class="brand">
-                    <svg class="logo" width="60" height="60" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10" y="10" width="100" height="100" rx="20" ry="20" fill="#FFFFFF" stroke="#006400" stroke-width="4"/>
-                        <path d="M30 90 C 45 40, 75 40, 90 90" fill="none" stroke="#006400" stroke-width="4"/>
-                        <path d="M50 90 C 60 60, 70 60, 80 90" fill="none" stroke="#DAA520" stroke-width="4"/>
-                        <circle cx="60" cy="50" r="15" fill="#DAA520"/>
-                        <text x="60" y="55" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="bold">NDR</text>
-                        <text x="60" y="105" font-family="Arial, sans-serif" font-size="10" fill="#006400" text-anchor="middle" font-weight="bold">AGROVENTURES</text>
-                    </svg>
-                </a>
-                <span class="company-name">NDR AGROVENTURES PVT LTD</span>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
+            <div class="navbar-content">
+                <div class="navbar-left">
+                    <a href="#" class="brand">
+                        <img src="images/logo.png" alt="NDR AGROVENTURES Logo" class="logo">
+                    </a>
+                    <span class="company-name">NDR AGROVENTURES PVT LTD</span>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#products" class="nav-link">Products</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#locations" class="nav-link">Locations</a></li>
+                <!-- <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#locations" class="nav-link">Locations</a></li> -->
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="login.php" class="nav-link">Login</a></li>
-                <li><a href="register.php" class="nav-link">Sign Up</a></li>
             </ul>
         </div>
     </nav>
+    <div class="company-name-animation">
+        <h1>NDR AGROVENTURES PVT LTD</h1>
+    </div>
 
     <header id="home">
-        <div class="image-slider">
-            <div class="slide" id="slide1"></div>
-            <div class="slide" id="slide2"></div>
-            <div class="slide" id="slide3"></div>
-            <div class="slide" id="slide4"></div>
-        </div>
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/backgroundvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="overlay"></div>
         <div class="header-content">
             <h1 class="company-name-animated">NDR AGROVENTURES PVT LTD</h1>
@@ -63,23 +57,32 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Us</h2>
-            <p>NDR AGROVENTURES PVT LTD is a leading agricultural export company based in India. With years of experience and a commitment to quality, we specialize in sourcing and exporting premium agricultural products to global markets.</p>
-            <div class="features">
-                <div class="feature">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Quality Assurance</h3>
-                    <p>We maintain strict quality control measures to ensure our products meet international standards.</p>
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>NDR AGROVENTURES PVT LTD is a leading agricultural export company based in India. With years of experience and a commitment to quality, we specialize in sourcing and exporting premium agricultural products to global markets.</p>
+                    <p>Our mission is to bridge the gap between Indian farmers and international consumers, ensuring that the finest agricultural produce reaches tables around the world.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Quality Assurance</h3>
+                            <p>We maintain strict quality control measures to ensure our products meet international standards.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe"></i>
+                            <h3>Global Reach</h3>
+                            <p>Our extensive network allows us to serve clients across various international markets.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Reliable Partnerships</h3>
+                            <p>We build long-lasting relationships with both farmers and clients, ensuring mutual growth and success.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-globe"></i>
-                    <h3>Global Reach</h3>
-                    <p>Our extensive network allows us to serve clients across various international markets.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Reliable Partnerships</h3>
-                    <p>We build long-lasting relationships with both farmers and clients, ensuring mutual growth and success.</p>
+                <div class="about-image">
+                    <img src="images/officeimage.jpeg" alt="NDR AGROVENTURES Office" class="office-photo">
+                    <img src="images/logo.png" alt="NDR AGROVENTURES Logo" class="about-logo">
                 </div>
             </div>
         </div>
@@ -88,26 +91,101 @@
     <section id="products" class="products">
         <div class="container">
             <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Premium Rice">
-                    <h3>Premium Rice</h3>
-                    <p>High-quality Basmati and non-Basmati rice varieties</p>
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="images/pusabasmati.jpeg" alt="Pusa (D.B) Basmati Rice">
+                    </div>
+                    <div class="product-content">
+                        <h3>Pusa (D.B) Basmati Rice</h3>
+                        <p>Experience the finest quality Basmati rice, known for its exquisite aroma and long, fluffy grains. Our premium Basmati is sourced from the best paddy fields, ensuring perfect texture and taste for your gourmet dishes.</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Origin: Developed by the Indian Agricultural Research Institute in New Delhi, India.</p>
+                            <p>First Cultivated: Introduced in the early 1990s as an improved Basmati variety.</p>
+                            <p>Characteristics: Extra-long grains, distinctive aroma, and excellent cooking quality.</p>
+                        </div>
+                        <button class="btn toggle-details">Learn More</button>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Organic Spices">
-                    <h3>Organic Spices</h3>
-                    <p>A wide range of certified organic spices</p>
+                
+                <div class="product-item reverse">
+                    <div class="product-image">
+                        <img src="images/whitesellarice.jpeg" alt="PR 11 White Sella Rice">
+                    </div>
+                    <div class="product-content">
+                        <h3>PR 11 White Sella Rice</h3>
+                        <p>Discover our premium PR 11 White Sella rice, a popular variety known for its excellent quality and versatility. Perfect for everyday meals, this rice offers a delightful texture and taste that complements a wide range of dishes.</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Origin: Developed in Punjab, India, by the Punjab Agricultural University.</p>
+                            <p>First Cultivated: Introduced in the mid-1980s as a high-yielding variety.</p>
+                            <p>Characteristics: Medium-long grains, slightly aromatic, and ideal for both everyday and special occasion cooking.</p>
+                        </div>
+                        <button class="btn toggle-details">Learn More</button>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Pulses and Lentils">
-                    <h3>Pulses and Lentils</h3>
-                    <p>Nutritious and high-quality pulses and lentils</p>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="images/parboiledbrokenrice.jpeg" alt="Parboiled Broken Rice">
+                    </div>
+                    <div class="product-content">
+                        <h3>Parboiled Broken Rice</h3>
+                        <p>Our parboiled broken rice is a nutritious and economical option. With its unique processing method, it retains more nutrients than regular white rice while offering a satisfying texture, making it ideal for various culinary applications.</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Origin: Parboiling is an ancient process originating in India over 2000 years ago.</p>
+                            <p>Process: Rice is partially boiled in the husk, changing the starch structure and increasing nutrient retention.</p>
+                            <p>Benefits: Higher in nutrients, especially B vitamins, compared to regular milled rice. Excellent for making rice flour and animal feed.</p>
+                        </div>
+                        <button class="btn toggle-details">Learn More</button>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Fresh Fruits">
-                    <h3>Fresh Fruits</h3>
-                    <p>Seasonal fruits sourced from the best orchards</p>
+                
+                <div class="product-item reverse">
+                    <div class="product-image">
+                        <img src="images/106parboiledrice.jpeg" alt="PR 106 Parboiled Rice">
+                    </div>
+                    <div class="product-content">
+                        <h3>PR 106 Parboiled Rice</h3>
+                        <p>Our PR 106 Parboiled Rice offers the perfect balance of nutrition and taste. This variety is known for its ability to remain separate after cooking, making it an excellent choice for a wide range of dishes, from biryanis to everyday meals.</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Origin: Developed by Punjab Agricultural University, Ludhiana, India.</p>
+                            <p>First Cultivated: Released in 1976 as a high-yielding variety.</p>
+                            <p>Characteristics: Medium-long grains, slightly sticky when cooked, and rich in nutrients due to the parboiling process.</p>
+                        </div>
+                        <button class="btn toggle-details">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="images/parboiledrice.jpeg" alt="IR 64 Parboiled Rice with 5% Broken">
+                    </div>
+                    <div class="product-content">
+                        <h3>IR 64 Parboiled Rice with 5% Broken</h3>
+                        <p>Our IR 64 Parboiled Rice with 5% Broken offers great value without compromising on quality. This variety is perfect for those seeking a nutritious and cost-effective rice option that performs well in various cooking methods.</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Origin: Developed by the International Rice Research Institute (IRRI) in the Philippines.</p>
+                            <p>First Cultivated: Released in 1985 and quickly became popular across Asia.</p>
+                            <p>Characteristics: Medium-long grains, good cooking quality, and disease resistance. The 5% broken content adds value while maintaining overall quality.</p>
+                        </div>
+                        <button class="btn toggle-details">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="product-item reverse">
+                    <div class="product-image">
+                        <img src="images/streambasmatirice.jpeg" alt="1121 Stream Basmati Rice">
+                    </div>
+                    <div class="product-content">
+                        <h3>1121 Stream Basmati Rice</h3>
+                        <p>Indulge in the premium quality of our 1121 Stream Basmati Rice. Known for its extra-long grains and aromatic flavor, this rice variety is perfect for special occasions and gourmet dishes, elevating your culinary creations to new heights.</p>
+                        <div class="product-details" style="display: none;">
+                            <p>Origin: Developed by Indian Agricultural Research Institute (IARI), New Delhi, India.</p>
+                            <p>First Cultivated: Introduced in 2003 as a high-yielding, extra-long grain Basmati variety.</p>
+                            <p>Characteristics: Extra-long grains (up to 8.4mm after cooking), distinctive aroma, and excellent elongation upon cooking. Known for its soft texture and delicate flavor.</p>
+                        </div>
+                        <button class="btn toggle-details">Learn More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,18 +193,26 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Agro Lane, Mumbai, India 400001</p>
-                    <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
-                    <p><i class="fas fa-envelope"></i> info@ndragroventures.com</p>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jai Gurudev nagar, near water park, Mehiya, Chapra, Mehian, Bihar 841302</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+918053686865">+91 8053686865</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:ndragroventurespvtltd@gmail.com">ndragroventurespvtltd@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                        <li><i class="fas fa-calendar-times"></i> Sunday: Closed</li>
+                    </ul>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14368.27795321306!2d84.7741168!3d25.8012815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992b18e5e7a348d%3A0x6dbcfbbfb7c0d672!2sNDR%20AGROVENTURES%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1728124253512!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+                    </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                <form class="contact-form" onsubmit="return showPopup(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
@@ -140,5 +226,45 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButtons = document.querySelectorAll('.toggle-details');
+        
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productContent = this.closest('.product-content');
+                const details = productContent.querySelector('.product-details');
+                
+                if (details.style.display === 'none') {
+                    details.style.display = 'block';
+                    this.textContent = 'Hide';
+                } else {
+                    details.style.display = 'none';
+                    this.textContent = 'Learn More';
+                }
+            });
+        });
+    });
+    </script>
+
+    <!-- Add this div for the popup message -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Currently this feature is not available. Please contact us on the given number or email.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+    function showPopup(event) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById('popup').style.display = 'flex';
+        return false;
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+    </script>
 </body>
 </html>

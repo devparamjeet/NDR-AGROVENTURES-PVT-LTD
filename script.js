@@ -4,12 +4,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInside = navMenu.contains(event.target) || navToggle.contains(event.target);
+        if (!isClickInside && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+    });
+
+    // Close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
         });
     });
 
