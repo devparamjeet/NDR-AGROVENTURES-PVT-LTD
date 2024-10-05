@@ -1,0 +1,52 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Highlight active section on scroll
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.scrollY;
+
+        document.querySelectorAll('section').forEach(section => {
+            if (scrollPosition >= section.offsetTop - 60 && 
+                scrollPosition < (section.offsetTop + section.offsetHeight - 60)) {
+                let id = section.getAttribute('id');
+                document.querySelector('.nav-link.active').classList.remove('active');
+                document.querySelector(`.nav-link[href="#${id}"]`).classList.add('active');
+            }
+        });
+
+        // Special case for home/header
+        if (scrollPosition < document.querySelector('#about').offsetTop - 60) {
+            document.querySelector('.nav-link.active').classList.remove('active');
+            document.querySelector('.nav-link[href="#"]').classList.add('active');
+        }
+    });
+
+    // Loading screen effect
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.body.classList.add('loaded');
+        }, 500); // Delay of 500ms for demo purposes. Adjust as needed.
+    });
+});
